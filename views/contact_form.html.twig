@@ -1,0 +1,73 @@
+{% extends 'layout.html.twig' %}
+{% set adminMenu = true %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+  <h2 class="text-center">{{ block('title') }}</h2>
+  {% for flashMessage in app.session.flashbag.get('success') %}
+    <div class="alert alert-success">
+        {{ flashMessage }}
+    </div>
+  {% endfor %}
+  <form action="#" method="post">
+		{{ form_start(form) }}
+		{{ form_errors(form) }}
+
+  <div class="well">
+    {{ form_start( contactForm, { 'attr': {'class': 'form-horizontal'} }) }}
+      <div class="form-group">
+        {{ form_label(contactForm.nom, null, { 'label_attr':  {
+              'class': 'col-sm-4 control-label'
+        }}) }}
+        <div class="col-sm-6">
+          {{ form_errors(contactForm.nom) }}
+          {{ form_widget(contactForm.nom, { 'attr':  {
+            'class': 'form-control'
+          }}) }}
+        </div>
+      </div>
+
+      <div class="form-group">
+          {{ form_label(contactForm.email, null, { 'label_attr':  {
+              'class': 'col-sm-4 control-label'
+          }}) }}
+          <div class="col-sm-6">
+              {{ form_errors(contactForm.email) }}
+              {{ form_widget(contacteForm.email, { 'attr':  {
+                  'class': 'form-control'
+              }}) }}
+          </div>
+      </div>
+      <div class="form-group">
+          {{ form_label(contactForm.telephone, null, { 'label_attr':  {
+              'class': 'col-sm-4 control-label'
+          }}) }}
+          <div class="col-sm-6">
+              {{ form_errors(contactForm.telephone) }}
+              {{ form_widget(contactForm.telephone, { 'attr':  {
+                  'class': 'form-control'
+              }}) }}
+          </div>
+      </div>
+      <div class="form-group">
+          {{ form_label(competenceForm.message, null, { 'label_attr':  {
+              'class': 'col-sm-4 control-labmessageel'
+          }}) }}
+          <div class="col-sm-6">
+              {{ form_errors(competenceForm.message) }}
+              {{ form_widget(competenceForm.message, { 'attr':  {
+                  'class': 'form-control'
+              }}) }}
+          </div>
+      </div>
+
+  </div>
+      <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+              <input type="submit" class="btn btn-primary" value="Send" />
+          </div>
+      </div>
+  {{ form_end( contactForm ) }}
+  </div>
+{% endblock %}

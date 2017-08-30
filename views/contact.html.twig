@@ -1,0 +1,14 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1>Contact</h1>
+  {% for contact in contacts %}
+    <article>
+        <h2><a class="articleTitle" href="{{ path('contact', { 'id': contact.id }) }}">{{contact.nom }}</a></h2>
+        <p>{{ contact.content }}</p>
+    </article>
+  {% endfor %}
+
+{% endblock %}

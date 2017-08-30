@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+   <!--Encodage de la page-->
+    <meta charset="UTF-8">
+   <!--Titre de la page-->
+    <title>titre de ma page</title>
+   <!--Pour Internet Explorer:S'assurer qu'il utlise la derniére version du moteur de rendu.
+    https://www.alsacreations.com/astuce/lire/1437-comment-interdire-le-mode-de-comptabilite-sur-ie.html-->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <!--Affichage du site sans zoom,initialisé à 100%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Styles CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
+    <!--HTML5 Shiv-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <!-- <style>
+         [class*="col-"]{
+        background-color: rgba(86, 61, 124, 0.15);
+        border: 1px solid rgba(86, 61, 124, 0.2);
+        padding-bottom: 15px;
+        padding-top:15px;
+        margin-bottom:5px;
+    }
+    </style>-->
+    
+   </head>
+    
+   <body>
+    <!--------------
+       CONTENU HTML
+     --------------->
+    
+        <main class="container">
+            <div class="row rm"><!--rm pe enlever la marge-->
+             <header class="col-xs-12">
+                 <div class="row">
+                     <section class="col-xs-12 rp">
+                       <img  width="400" class="img-responsive img-rounded img-thumbnail" src="assets/img/plage1.jpeg" alt="Projecteur">
+                     </section>
+                     <nav class="col-xs-12 rp"> 
+                        <ul>
+                           <li class="current"><a href="index.html">ACCUEIL</a></li> 
+                           <li><a href="#Présentation"> PRESENTATION </a></li>
+                           <li><a href="Contact"> CONTACT </a></li>
+                        </ul>
+                     </nav>
+                </div>
+            </header>
+           </div> 
+<!---------------
+ SECTIONS ARTICLE
+ -------------->
+           <section aside="Image" class="col-12-xs p20">
+                 <div class="row rm">
+                    <div class="col-md-6">
+                     <!-- 1.image d'illustration-->
+                         <img class="img-responsive  img-rounded img-thumbnail" src="assets/img/plage2.jpg" alt="Mehdia">
+                         <img class="img-responsive  img-rounded img-thumbnail hidden-sm hidden-xs mt-15" src="assets/img/plage2.jpg" alt="Mehdia"> 
+                    </div>
+                    <div class="col-md-6">
+                        <article>
+                <!--2.texte d'introduction-->
+                         <br>
+                         <h1>Découvez Méhdia Plage</h1>
+                         <p>Mehdia est une ville du Maroc.</p><p><span> Elle est située dans la région de Rabat-Salé-Kénitra.</span></p> 
+                         <p>C'est une pittoresque petite ville côtière située près de la ville de Kénitra à 30 km au nord-est de la capitale Rabat.</p>
+                         <p> <span>LE PORT DE PÊCHE ,</span> très pittoresque à l'embouchure de l'Oued Sebou, la proximité de la réserve biologique du lac Sidi Boughaba avec ses forêts et ses colonies d'oiseaux rares, les forts espagnols, portugais et hollandais, la kasbah de Yaqub al-Mansur, et la proximité des sites antiques de Banasa et de Thamusida lui sont des atouts indiscutables pour développer le tourisme de ce village, encore peu connu.</p>
+                           <p><span>Ses longues plages de sable fin,</span> sont également très appréciées par les surfeurs et les bodyboardeurs.</p>
+                            <!--<p>Une plage qui s'étend sur plusieurs km, l'océan Atlantique y offre ses plus belles vagues faisant de l'endroit une bonne destination pour les amoureux du surf.</p>
+                            <p>Parfait pour se baigner ou bien se  balader , des nombreux restaurants à friture en face de la plage pour se restaurer.</p-->
+                        </article>                     
+                    </div>
+                </div>
+           </section>
+                   
+<!--------------
+  FOOTER               
+---------------->                   
+
+        <footer>
+            <section class="col-xs-12 p20">
+             <div class="row rm">
+                <div class="col-sm-4 gmap " >
+                  <!--3.mettre en pace de google map-->
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6595.563490574319!2d-6.684300872044763!3d34.25411242220582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda75ebc0799005d%3A0x163f8abcf1c3faa2!2sPlage+Mehdia!5e0!3m2!1sfr!2sfr!4v1490693638940" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                   </div>
+                             
+                  <div class="col-sm-4 rm Newsletter">
+                
+                     <!--4.formulaire de newsletter|nom,prénom et Email -->
+                      <form name="Newletter" action="Newsletter.php" method="post">
+                          <fieldset>
+                              <legend> newsletter</legend>
+                                 <input type="text"  name="nom"  placeholder="Nom">
+                                 <input type="text" name="prénom"  placeholder="Prénom">
+                                 <input type="email" name="email"  placeholder="Email" required>
+                                  <input type="submit" value="M'inscrire !">
+                          </fieldset>
+                     </form> 
+                   </div>
+         
+                  <div class="col-sm-4 rm contact">
+                     
+             <!--5.corrdonnées de contact-->
+                 <h3> Contactez-nous</h3>
+                    <adress>
+                     <strong><i class="fa fa-female" aria-hidden="true"></i> Hanane KHARRAF <br> </strong>
+                      <a href="tel:+33678718852"><i class="fa fa-mobile" aria-hidden="true"></i> 06 78 71 88 52 <br></a>
+                      <a href="mailto:m-hanane@hotmail.fr"><i class="fa fa-envelope" aria-hidden="true"></i> m-hanane@hotmail.fr</a>
+                      <br><strong>142,avenue jean jaurés <br>93500 Pantin <br> France</strong>
+                         
+                    </adress>
+                </div>
+                </div> 
+               
+            </section>
+        </footer> 
+     </main> 
+ 
+   
+       
+           
+            <!--jquery -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            
+     
+  </body>
+         
+        
+</html>

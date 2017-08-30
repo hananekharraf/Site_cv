@@ -1,0 +1,168 @@
+body{
+    background-image: url(../img/fond2.jpg);
+    background-size: cover;
+}
+.rm {
+    margin:0 !important;
+}
+.rp {
+    padding:0!important;
+}
+.mt-40 {
+    margin-top:40px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+.relative {
+    position: relative;
+}
+.clear {
+  clear: both;
+}  
+.p20{
+    padding:  20px !important;
+}
+
+main {
+     width:100%;/*je veux definir la largeur de ma page*/
+     max-width: 960px;/*mais,je ne vais pas au -dela de 960px*/
+     margin:0 auto;/*margin(top-bottom)_(left_right*/
+     background: #fff;/*je rajoute un fond gris a ma page*/
+}
+main {
+    margin: 80px auto 80px auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px #aaa;
+    padding: 5px;
+    overflow: hidden;
+}
+
+/*------projecteur-----------*/
+header section img {
+   width: 100%;
+   height: 330px;
+   object-fit: cover;
+}
+/*-----Navigation-----------*/
+header a {
+    text-decoration: none;
+    color: black;
+    /*ici je cible toute les listes présentent dans mon header*/
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+header ul li {
+     display: inline-block;
+    
+     width: auto;
+     margin: 10px;
+     font-size: 20px;
+     font-family: arial;
+}
+
+a:hover {
+  color:red;
+}
+header ul li.current {
+    color:red;
+}
+
+.iframe {
+    margin:0 auto;
+    display: block;
+    border:2px solid #fff;
+    border-radius: 10px;
+}
+
+article p {
+    color:black;
+    font-family:'Lobster', cursive;
+    font-size: 20px;
+    text-align: justify;
+}
+article h1 {
+   margin: 0;
+   margin-bottom: 25px;
+   color:deepskyblue;
+   font-family: 'Lobster', cursive;
+   text-shadow:  1px 1px 2px black; 
+   text-align: center;
+   font-size: 28px;
+   border-bottom: 5px solid black;
+
+}
+article p span {
+    color:deepskyblue;
+    text-shadow:  1px 1px 2px black;
+    
+}
+ section aside  img  {
+  max-width: 100%;
+  
+ 
+}
+
+footer section {
+  background-color:dimgray; 
+}
+
+
+.newsletter form fieldset{
+    border:2px solid #212121;
+    border-radius: 8px;
+    height: 170px;
+}
+
+.newsletter input[type=text],
+.newsletter input[type=email] {
+    width:99%;
+    height: 35px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+.newsletter input[type=submit] {
+    width: 99%;
+    height: 35px;
+    margin-top: 0px;
+    border: 0px;
+    background-color:#fff ;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact h3{
+    color:#795548;
+    text-align: center;
+    font-weight: normal;
+    
+}
+
+.contact addrees{
+    color: #795548;
+    padding-left: 10px;
+}
+
+.contact address strong{
+    font-size: 20px;
+    
+}
+.contact address a{
+    color: #795548;
+    text-decoration: none;
+    
+}
+
+.contact address a:hover{
+    text-decoration: underline;
+    color: #795548;
+}
+
+

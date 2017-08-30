@@ -1,0 +1,179 @@
+body {
+    background-color: black;
+}
+
+/*-------------------
+   NAV-BAR APPLE
+--------------------*/
+.navbar-apple {
+    background-color:  #1e1e1e;
+    border-radius: 0;
+    margin-bottom: 0;
+    
+}
+.navbar-apple  ul li a {
+    font-family: 'Roboto condensed',sans-serif;
+    font-weight: 400;
+} 
+.navbar-brand {
+    color:#fff !important;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+ 
+.navbar .navbar-collapse {
+    text-align: center;
+}
+ 
+
+
+/*--------------------
+  Section MObile
+---------------------*/
+#mobile {
+    background: #141414;
+}
+#mobile ul  {
+    padding: 10px 0;
+}
+#mobile ul li {
+    padding: 0 15px;
+}
+
+/*------------------
+Section Projecteur
+------------------*/
+#Projecteur {
+    text-align: center;
+}
+#Projecteur h2 {
+    font-family: 'Roboto condensed',sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+}
+#Projecteur h3 {
+    font-family: 'Roboto condensed',sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    color: #fff;
+}
+#Projecteur p {
+    color :#ccc;
+}
+
+
+/*------------------
+Section IPhone 7
+--------------------*/
+#iPhone7 {
+    background-image: linear-gradient(#fff 0%,#eee 100%);
+    padding:40px 0 0 0 ;
+}
+#iPhone7 article {
+    text-align: center;
+}
+#iPhone7 article h3{
+    font-family: 'Roboto condensed',sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color:#303236;
+    margin: 40px 0;
+}
+#iPhone7 article p {                                                                         
+   margin: 40px 0 ;
+}
+
+
+/*-----------------
+Section Contact
+------------------*/
+
+#Contact{
+    padding:100px 0;
+}
+
+#Contact h3 {
+    font-size: 40px;
+    color: #fff;
+    font-family: 'Roboto condensed',sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+#Contact .form-group:nth-child(2) >div:frist-child {
+    padding-left: 7.5px;
+}
+#Contact .form-group:nth-child(2) >div:nth-child(2) {
+    padding-left: 7.5px;
+}
+
+/*-------------------
+section FOOTER
+--------------------*/
+footer {
+    background-color: #1e1e1e;
+    padding: 10px 0;
+}
+footer p{
+   margin: 0;
+   text-align: center;
+   color:#fff;
+   font-size: 12px;
+}
+/*==========  Non-Mobile First Method  ==========*/
+/*== https://scotch.io/tutorials/default-sizes-for-twitter-bootstraps-media-queries ==*/
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+        #mobile ul li  {
+            margin-top: 15px;
+            width: calc( 100% / 4 );
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+       #mobile ul li {
+            width: calc( 100% / 3 );
+       
+        }
+        #iPhone7{
+            padding: 40px 0;
+        }
+        #iPhone7 img{
+            margin: 0 auto !important;
+        }
+        #contact input[type=email] {
+            margin-bottom: 15px;
+        }
+        #contact .form-group:nth-child(2) > div:frist-child {
+            padding-right: 15px;
+        }
+        #contact .form-group:nth-child(2) > div:nth-child(2) {
+            padding-left: 15px;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+         #mobile ul li {
+            width: calc( 100% / 2 );
+        }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
+
+

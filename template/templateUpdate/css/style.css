@@ -1,0 +1,105 @@
+/*body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #141414;
+  background-image: -webkit-linear-gradient(#262626 0%, #141414 90%);
+  background-image: linear-gradient(to   , #141414 90%);
+  background-size: 100% 150%;
+  background-repeat: no-repeat;
+}*/
+
+
+/*------------------------------*/
+#resumeProficiencies {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: 20px 0px 30px 30px;
+}
+
+#resumeProficienciesTop {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: -5px 0px 0px 0px;
+	text-align: left;
+	font-weight: 600;
+}
+
+#resumeProficienciesBottom {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: 2px 0px 0px 0px;
+}
+
+
+ .progress-bar-info {
+	background:#fed136;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#fed136));
+	background-image: -webkit-linear-gradient(top, #dddddd, #fed136);
+	background-image: -moz-linear-gradient(top, #dddddd, #fed136);
+	background-image: -ms-linear-gradient(top, #dddddd, #fed136);
+	background-image: -o-linear-gradient(top, #dddddd, #fed136);
+	background-image: linear-gradient(top, #222, #fed136);
+	height:20px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;
+}
+
+.html, .css, .jquery, .javascript, .bootstrap, .wordpress, .php, .sql, .rwd, .mobile, .rapidproto {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+ -o-transition: width 4.50s ease !important;
+  transition: width 4.50s ease !important;
+ }
+
+ .progress {
+  background:#222;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#888));
+	background-image: -webkit-linear-gradient(top, #222, #888);
+	background-image: -moz-linear-gradient(top, #222, #888);
+	background-image: -ms-linear-gradient(top, #222, #888);
+	background-image: -o-linear-gradient(top, #222, #888);
+	background-image: linear-gradient(top, #222, #888);
+	height:20px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 0px #222 inset, 0 1px 0 #888;
+	-webkit-box-shadow: 0 1px 0px #222 inset, 0 1px 0 #888;
+	box-shadow: 0 1px 0px #222 inset, 0 1px 0 #888;
+}
+
+
+
+#trait{
+    border-width: 3px;
+    border-color: #333;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    border-style:dotted;
+}
+hr {
+    width:50px;
+
+}
+.imgInside{
+  width: 100%;
+  height: 233px;
+background-size: cover;
+  background-position: center;
+}
+
+#portfolio .portfolio-caption{
+  height:135px;
+}
+#portfolio .caption-content{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#page-top section#contact  {
+  background-image: url('../images/img-map.jpg');
+}
