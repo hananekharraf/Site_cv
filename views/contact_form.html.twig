@@ -1,4 +1,4 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layout_html.twig' %}
 {% set adminMenu = true %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -69,5 +69,8 @@
           </div>
       </div>
   {{ form_end( contactForm ) }}
-  </div>
+  {% endif %}
+
+      </form>
+
 {% endblock %}

@@ -231,3 +231,39 @@ $app->match('/admin/competence/{id}/edit', "MicroCMS\Controller\AdminController:
 // Remove an competence
 $app->get('/admin/competence/{id}/delete', "MicroCMS\Controller\AdminController::deleteCompetenceAction")
 ->bind('admin_competence_delete');
+
+
+
+//FORM CONTACT
+
+$app -> match('/contact', function(Request $request) use ($app){
+	$contactForm = $app['form.factory'] -> create(MicroCMS\Form\Type\ContactType::class);
+
+	$contactForm -> handleRequest($request);
+	if($contactForm -> isSubmitted() && $contactForm -> isValid()){
+		
+		/*echo '<p style="color: red; font-weight: bold;">OK l\'envoie d\'email peut être activer</p>';*/
+		
+		$data = $contactForm->getData();
+		/*print_r($data);*/
+		extract($data);
+		
+		$header = "From: $email \r\n";
+		$header .= "Reply-To: $email \r\n";
+		$header .= "MIME-Version: 1.0 \r\n";
+		$header .= "Content-type: text/html; charset=iso-8859-1 \r\n";
+		$header .= "X-Mailer: PHP/" . phpversion();
+		
+		mail('hananekharraf@lepoles.com', $sujet, $message, $header);
+		
+	}
+	$contactFormView = $contactForm -> createView();
+	
+	$params = array(
+		'title' => 'Inscription',
+		'contactForm' => $contactFormView
+	);
+
+	return $app['twig'] -> render('contact.html.twig' ,$params);	
+	
+}) -> bind('contact');

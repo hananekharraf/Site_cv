@@ -616,7 +616,7 @@ section#contact ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #888;
+  color:#111;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
@@ -837,12 +837,6 @@ footer .col-md-12{
 }
 
 /*carrousel*/
-
-/*background-color: rgba(0,0,0,0.8);
-padding: 125px 23px;
-position: absolute;
-left: 0;
-margin: 0;*/
 #about .owl-nav{
   position: absolute;
   width: 100%;
@@ -878,17 +872,15 @@ margin: 0;*/
     transition: opacity 200ms ease;
     border-radius: 30px;
 }
+
 .bg-blend{
   z-index: 0;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: soft-light;
   height: 100%;
   width: 100%;
   background: linear-gradient(to right, rgb(26, 42, 108), rgb(178, 31, 31), rgb(253, 187, 45));
   position: absolute;
 }
-/*#about {
-background: linear-gradient(to right, rgb(255, 252, 0), rgb(255, 255, 255));
-}*/
 
 /* Dust Part */
 
@@ -898,6 +890,7 @@ background: linear-gradient(to right, rgb(255, 252, 0), rgb(255, 255, 255));
   max-height: 100vh;
 }
 #scene{
+  z-index: 0;
   position: absolute;
 }
 li {
@@ -945,7 +938,7 @@ li {
 
 #img-1 {
   opacity: 0.25;
-  background: url('https://image.ibb.co/jcTvpv/dust1.jpgg');
+  background: url('https://image.ibb.co/jcTvpv/dust1.jpg');
   background-repeat: repeat;
   animation-duration: 600s;
 }
@@ -991,6 +984,119 @@ li {
       transform:translate(8000px, 4000px);
   }
 }
-#servies{
-background: linear-gradient(to right, rgb(239, 239, 187), rgb(212, 211, 221));
+#portfolio{
+  overflow: hidden;
+  position: relative;
+  background-image: url('../images/image.header1.jpg');
+  background-attachment: fixed;
+}
+#contact{
+  overflow: hidden;
+  position: relative;
+}
+#contact .bg-blend{
+  top: 0;
+}
+#portfolio .bg-blend{
+  top:0;
+}
+#services{
+    background-color: #eeeeee;
+    }
+.section-heading-title {
+  color:white;
+  font-size:40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+/*titre h3 contact*/
+h3{
+  color:white;
+}
+
+.btn-xl {
+  position: relative;
+  color: white;
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+
+  color: white;
+  background-color: #fec503;
+  border-color: #f6bf01;
+}
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  background-color: #fed136;
+  border-color: #fed136;
+}
+.btn-xl .badge {
+  color: #fed136;
+  background-color: white;
+}
+
+/* liens a carousel*/
+
+.btn-xs {
+  color: white;
+  background-color:#000;
+  border-color: #efef;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding:10px 2px;
+  font-weight: 400;
+  border-radius: 14px;
+  font-size: 14px;
+  padding: 9px 50px;
+  line-height: 0.5;
+}
+.btn-xs .badge {
+  color: #000;
+  background-color: white;
+}
+
+.btn-xs:active,
+.btn-xs.active,
+.open .dropdown-toggle.btn-xs {
+  background-image: none;
+}
+
+.btn-xs:hover,
+.btn-xs:focus,
+.btn-xs:active,
+.btn-xs.active,
+.open .dropdown-toggle.btn-xs {
+  color: #eeeeee;
+  background-color: #888;
+  border-color: #efef 28px solid;
+  border-radius: red;
 }
