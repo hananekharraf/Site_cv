@@ -99,7 +99,7 @@ class AdminController {
       $loisirForm->handleRequest($request);
       if ( $loisirForm->isSubmitted() && $loisirForm->isValid() ) {
         $app['dao.loisir']->save($loisir);
-        $app['session']->getFlashBag()->add('success', 'Votre loisir à été enregistré avec succès.');
+        $app['session']->getFlashBag()->add('success', 'Votre loisir à été enregistré avec succé.');
       }
       return $app['twig']->render('loisir_form.html.twig', array(
         'title' => 'Editer votre loisir',
@@ -115,7 +115,7 @@ class AdminController {
       public function deleteLoisirAction( $id, Application $app ) {
           // Delete the article
           $app['dao.loisir']->delete($id);
-          $app['session']->getFlashBag()->add('success', 'Ce loisir à été supprimé avec succès !');
+          $app['session']->getFlashBag()->add('success', 'Ce loisir à été supprimé avec succé !');
           // Redirect to admin home page
           return $app->redirect($app['url_generator']->generate('admin'));
       }
@@ -201,7 +201,7 @@ class AdminController {
     public function deletePersoAction($id, Application $app) {
         // Delete the article
         $app['dao.perso']->delete($id);
-        $app['session']->getFlashBag()->add('success', 'Ces informations personnelles ont été supprimé.');
+        $app['session']->getFlashBag()->add('success', 'Ces information personnels ont été supprimé.');
         // Redirect to admin home page
         return $app->redirect($app['url_generator']->generate('admin'));
     }
@@ -251,7 +251,7 @@ class AdminController {
     public function deleteCompetenceAction($id, Application $app) {
         // Delete the article
         $app['dao.competence']->delete($id);
-        $app['session']->getFlashBag()->add('success', 'Ces informations personnelles ont été supprimé.');
+        $app['session']->getFlashBag()->add('success', 'Ces information personnels ont été supprimé.');
         // Redirect to admin home page
         return $app->redirect($app['url_generator']->generate('admin'));
     }
@@ -299,7 +299,7 @@ class AdminController {
         $portfolioForm->handleRequest($request);
         if ($portfolioForm->isSubmitted() && $portfolioForm->isValid()) {
             $app['dao.portfolio']->save($portfolio);
-            $app['session']->getFlashBag()->add('success', 'Vous avez édite cet élement avec succés.');
+            $app['session']->getFlashBag()->add('success', 'Vous avez édité cette element avec succés.');
         }
         return $app['twig']->render('portfolio_form.html.twig', array(
             'title' => 'Editer ces informations portfolionnels',

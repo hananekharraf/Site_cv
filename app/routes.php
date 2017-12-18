@@ -208,7 +208,6 @@ $app->match('/admin/comment/{id}/edit', "MicroCMS\Controller\AdminController::ed
 $app->get('/admin/comment/{id}/delete', "MicroCMS\Controller\AdminController::deleteCommentAction")
 ->bind('admin_comment_delete');
 
-
 // ======================================
 // CONCERNE COMPETENCES
 
@@ -232,20 +231,18 @@ $app->match('/admin/competence/{id}/edit', "MicroCMS\Controller\AdminController:
 $app->get('/admin/competence/{id}/delete', "MicroCMS\Controller\AdminController::deleteCompetenceAction")
 ->bind('admin_competence_delete');
 
-
-
-//FORM CONTACT
-
+// ======================================
+// CONCERNE CONTACTS
 $app -> match('/contact', function(Request $request) use ($app){
 	$contactForm = $app['form.factory'] -> create(MicroCMS\Form\Type\ContactType::class);
 
 	$contactForm -> handleRequest($request);
 	if($contactForm -> isSubmitted() && $contactForm -> isValid()){
 		
-		/*echo '<p style="color: red; font-weight: bold;">OK l\'envoie d\'email peut être activer</p>';*/
+		echo '<p style="color: red; font-weight: bold;">OK l\'envoie d\'email peut être activer</p>';
 		
 		$data = $contactForm->getData();
-		/*print_r($data);*/
+		print_r($data);
 		extract($data);
 		
 		$header = "From: $email \r\n";
@@ -254,7 +251,7 @@ $app -> match('/contact', function(Request $request) use ($app){
 		$header .= "Content-type: text/html; charset=iso-8859-1 \r\n";
 		$header .= "X-Mailer: PHP/" . phpversion();
 		
-		mail('hananekharraf@lepoles.com', $sujet, $message, $header);
+		mail('contact@monsite.com', $sujet, $message, $header);
 		
 	}
 	$contactFormView = $contactForm -> createView();
@@ -264,6 +261,6 @@ $app -> match('/contact', function(Request $request) use ($app){
 		'contactForm' => $contactFormView
 	);
 
-	return $app['twig'] -> render('contact.html.twig' ,$params);	
+	return $app['twig'] -> render('index.html.twig' ,$params);	
 	
 }) -> bind('contact');

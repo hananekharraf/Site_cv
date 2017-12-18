@@ -33,8 +33,7 @@ class contactController extends AdminController {
 			if ($form->isValid())
 			{
 				$data = $form->getData();
-				//$contactEmail = 'enquiries@richardhutchinson.me.uk';
-				$contactEmail = 'm@michaelcullum.com';
+				$contactEmail = 'alonsore8@gmail.com';
 				$headers = 'From: ' . $contactEmail . "\r\n" .
 					'Reply-To: ' . $data['email'] . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();

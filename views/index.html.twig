@@ -5,35 +5,21 @@
 {% block content %}
 
 
-<!-- ----------------------------------------------------------       HEADER        ----------------------------------------------------  -->
+<!--        HEADER          -->
 
-<!-- Header -->
 <header class="masthead">
   <div class="bg-blend"></div>
-  <ul id="scene" data-friction-x="0.03"
-  data-friction-y="0.05">
-  <li class="layer" id="specks" data-depth="0.1"></li>
-  <li class="layer" id="layer-1" data-depth="0.15">
-    <div class="img" id="img-1"></div>
-  </li>
-  <li class="layer" id="layer-2" data-depth="0.25">
-    <div class="img" id="img-2"></div>
-  </li>
-  <li class="layer" id="layer-3" data-depth="0.45">
-    <div class="img" id="img-3"></div>
-  </li>
-</ul>
   <div class="container">
     {% for perso in persos %}
       <div class="intro-text">
         <div class="animated bounceInLeft intro-lead-in">Motivée & disponible</div>
         <div class="animated bounceInRight intro-heading">{{ perso.poste }} </div>
-                  <ul class="animated bounceInLeft list-inline social-buttons">
-                        <li><a href=" {{ perso.github }}" target="_blank" rel="noopener" title="Mon compte github"><i class="fa fa-github"></i></a></li>
-                        <li><a href=" {{ perso.linkedin }}" target="_blank"  rel="noopener" title="Mon profil linkedIn"><i class="fa fa-linkedin"></i></a></li>
-                  </ul>
-         <div class="intro-heading"></div>
-         <a class="btn btn-xl js-scroll-trigger" href="{{ asset('/cvPdf/CV_hanane_kharraf.pdf') }}" target="_blank"  rel="noopener" title="Mon CV en format pdf" download>Téléchargez-mon CV</a>
+          <ul class="animated bounceInLeft list-inline social-buttons">
+                <li><a href=" {{ perso.github }}" target="_blank" rel="noopener" title="Mon compte github"><i class="fa fa-github"></i></a></li>
+                <li><a href=" {{ perso.linkedin }}" target="_blank"  rel="noopener" title="Mon profil linkedIn"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        <div class="intro-heading"></div>
+        <a class="btn btn-xl js-scroll-trigger" href="{{ asset('cvPdf/CV_hanane_kharraf.pdf') }}" title="Mon CV en format pdf" download>Téléchargez-mon CV</a>
       </div>
 
     {% endfor %}
@@ -42,23 +28,23 @@
 
 
 
-<!------------------------------------------------------       SECTION COMPETENCES    -------------------------------------------------- -->
+<!--       SECTION COMPETENCES     -->
 
 <section id="services">
      <div class="container">
          <div class="row">
              <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Compétences</h2>
-                <h3 class="section-subheading text-muted"></h3>
+
 
                      <div class="col-md-4 text-center">
                           <h4>Front-End</h4>
-                              <hr id="trait">
+                              <hr class="trait">
                           {% for competence in competences %}
                             {% if competence.categorie == 'front' %}
 
-                                <div id="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
-                                <div id="resumeProficienciesBottom">
+                                <div class="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
+                                <div class="resumeProficienciesBottom">
                                     <div class="progress">
                                         <div class="html progress-bar progress-bar-info" niveau="{{ competence.valeur }}" role="progressbar" ></div>
                                     </div>
@@ -70,12 +56,12 @@
 
                       <div class="col-md-4 text-center">
                           <h4>Back</h4>
-                              <hr id="trait">
+                              <hr class="trait">
                           {% for competence in competences %}
                             {% if competence.categorie == 'back' %}
 
-                            <div id="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
-                            <div id="resumeProficienciesBottom">
+                            <div class="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
+                            <div class="resumeProficienciesBottom">
                                     <div class="progress">
                                         <div class="html progress-bar progress-bar-info" niveau="{{ competence.valeur }}" role="progressbar" ></div>
                                     </div>
@@ -87,13 +73,13 @@
 
                       <div class="col-md-4 text-center">
                           <h4>Numérique/web</h4>
-                                <hr id="trait">
+                                <hr class="trait">
 
                           {% for competence in competences %}
                              {% if competence.categorie == 'numerique/web' %}
 
-                                <div id="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
-                                    <div id="resumeProficienciesBottom">
+                                <div class="resumeProficienciesTop">{{ competence.nom }}</div><!--END resumeProficienciesTop-->
+                                    <div class="resumeProficienciesBottom">
                                     <div class="progress">
                                         <div class="html progress-bar progress-bar-info" niveau="{{ competence.valeur }}" role="progressbar" ></div>
                                     </div>
@@ -107,32 +93,16 @@
         </div>
 </section>
 
-  <!-- ----------------------------------------     SECTION PORTFOLIO         ------------------------------ ---->
+  <!--      SECTION PORTFOLIO        -->
 
 
 <section id="portfolio" class="bg-light-gray">
 
   <div class="bg-blend"></div>
-  <ul id="scene" data-friction-x="0.03"
-  data-friction-y="0.05">
-    <li class="layer" id="specks" data-depth="0.1"></li>
-    <li class="layer" id="layer-1" data-depth="0.15">
-      <div class="img" id="img-1"></div>
-    </li>
-    <li class="layer" id="layer-2" data-depth="0.25">
-      <div class="img" id="img-2"></div>
-    </li>
-    <li class="layer" id="layer-3" data-depth="0.45">
-      <div class="img" id="img-3"></div>
-    </li>
-  </ul>
-
-
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading-title">Expériences Professionnelles</h2>
-                <h3 class="section-subheading text-muted"></h3>
             </div>
         </div>
 
@@ -166,28 +136,28 @@
 
 
       {% for experience in experiences %}
-          <div class="portfolio-modal modal fade" id="portfolioModal{{ experience.id }}" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                      <div class="close-modal" data-dismiss="modal">
-                        <div class="lr">
-                        <div class="rl"></div>
-                        </div>
-                      </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal{{ experience.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                  <div class="rl"></div>
+                </div>
+              </div>
               <div class="container">
-                  <div class="row">
-                      <div class="col-lg-8 col-lg-offset-2">
-                           <div class="modal-body">
-                           <h2>{{ experience.poste }}</h2>
-                                  <ul class="list-inline">
-                                      <li>De {{experience.debut |date("d-m-Y") }} à {{experience.fin |date("d-m-Y") }}</li>
-                                      <li>Lieu: Pantin 93</li>
-                                  </ul>
-                            <p class="item-intro text-muted"></p>
-                              <img class="img-responsive img-centered" src="{{ experience.img | lower }}" alt="">
-                            <p>{{ experience.content }}</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fermer la fiche</button>
-                          </div>
+                <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2">
+                     <div class="modal-body">
+                       <h2>{{ experience.poste }}</h2>
+                        <ul class="list-inline">
+                          <li>De {{experience.debut |date("d-m-Y") }} à {{experience.fin |date("d-m-Y") }}</li>
+                          <li>Lieu: Pantin 93</li>
+                        </ul>
+                        <p class="item-intro text-muted"></p>
+                        <img class="img-responsive img-centered" src="{{ experience.img | lower }}" alt="">
+                        <p>{{ experience.content }}</p>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Fermer la fiche</button>
+                      </div>
                     </div>
                 </div>
               </div>
@@ -198,8 +168,7 @@
 
 
 
-<!-- ----------------------------------------     SECTION REALISATIONS         ------------------------------ ---->
-
+<!--      SECTION REALISATIONS          -->
 
 
 <!-- About Section -->
@@ -210,6 +179,7 @@
                         <h2 class="section-heading">Réalisations</h2>
                         <h3 class="section-subheading text-muted">Quelques travaux pratiques réalisés dans le cadre de ma formation.</h3>
                   </div>
+            </div>
 
   <!-- Owl Carroussel -->
               <div class="row">
@@ -226,128 +196,102 @@
                       </div>
                   </div>
               </div>
-            </div>
       </div>
 </section>
 
 
-<!------------------------------------         SECTION LOISIRS       ------------------------------------------------ -->
+<!--         SECTION LOISIRS        -->
 
 
 
 
 <section id="team" class="bg-light-gray">
-      <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Loisirs</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-               </div>
-            </div>
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Loisirs</h2>
 
-            <div class="row">
-              {% for loisir in loisirs %}
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <div class="team-img img-circle">
-                          <img src="{{loisir.photo}}" class="img-responsive " alt="image-loisirs">
-                        </div>
-                        <h4>{{ loisir.title }}</h4>
-                        <p class="text-muted">{{ loisir.content }}</p>
+           </div>
+        </div>
+
+        <div class="row">
+          {% for loisir in loisirs %}
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <div class="team-img img-circle">
+                      <img src="{{loisir.photo}}" class="img-responsive " alt="image-loisirs">
                     </div>
-               </div>
-             {% endfor %}
-            </div>
-      </div>
+                    <h4>{{ loisir.title }}</h4>
+                    <p class="text-muted">{{ loisir.content }}</p>
+                </div>
+           </div>
+         {% endfor %}
+        </div>
+  </div>
 </section>
 
 
 
 
-<!------------------------------------------     SECTION CONTACT      -------------------------------------------------- ----->
-
-
+<!--    SECTION CONTACT       -->
 
   <section id="contact">
     <div class="bg-blend"></div>
-    <ul id="scene" data-friction-x="0.03"
-    data-friction-y="0.05">
-      <li class="layer" id="specks" data-depth="0.1"></li>
-      <li class="layer" id="layer-1" data-depth="0.15">
-        <div class="img" id="img-1"></div>
-      </li>
-      <li class="layer" id="layer-2" data-depth="0.25">
-        <div class="img" id="img-2"></div>
-      </li>
-      <li class="layer" id="layer-3" data-depth="0.45">
-        <div class="img" id="img-3"></div>
-      </li>
-    </ul>
-
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading" class="contact">Contactez-Moi</h2>
-                  <h3 class="section-subheading">Mon profil vous intéresse ? N'hésitez pas à me contacter!</h3>
-              </div>
-          </div>
-
-         <!-- infos perso -->
-         <div class="row perso">
-                   <div class="col-lg-4 ml-auto text-center">
-                      <i class="fa fa-map-marker fa-3x"></i>
-                      <p>Pantin 93500, France </p>
-                   </div>
-
-                   <div class="col-lg-4 mr-auto text-center">
-                      <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                      <p>hanane.kharraf@lepoles.com</p>
-                   </div>
-
-                   <div class="col-lg-4 ml-auto text-center">
-                      <i class="fa fa-phone fa-3x sr-contact"></i>
-                      <p>06 78 71 88 52</p>
-                   </div>
-        </div>  <!-- fin infos perso -->
-
-          <div class="row">
-              <div class="col-lg-12">
-                  <form name="sentMessage" id="contactForm" novalidate>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Nom *" id="name" required data-validation-required-message="Entrez votre Nom.">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-
-                              <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Email *" id="email" required data-validation-required-message="Entrez votre e-mail.">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-
-                              <div class="form-group">
-                                  <input type="tel" class="form-control" placeholder="Téléphone " id="phone">
-                                  <p class="help-block text-danger"></p>
-                              </div>
-
-                          </div>
-
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <textarea class="form-control" placeholder="Message *" id="message" required data-validation-required-message="Entrez votre message."></textarea>
-                                  <p class="help-block text-danger"></p>
-                              </div>
-                          </div>
-
-                          <div class="clearfix"></div>
-                          <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <button type="submit" class="btn btn-xl">Envoyer</button>
-                          </div>
-                      </div>
-                  </form>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading contact">Contactez-Moi</h2>
+          <h3 class="section-subheading">Mon profil vous intéresse ? N'hésitez pas à me contacter!</h3>
         </div>
+      </div>
+      <!-- infos perso -->
+      <div class="row perso">
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fa fa-map-marker fa-3x"></i>
+          <p>Pantin 93500, France </p>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+          <p>hanane.kharraf@lepoles.com</p>
+        </div>
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fa fa-phone fa-3x sr-contact"></i>
+          <p>06 78 71 88 52</p>
+        </div>
+      </div>  <!-- fin infos perso -->
+      <div class="row">
+        <div class="col-lg-12">
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nom *" id="name" required data-validation-required-message="Entrez votre Nom.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email *" id="email" required data-validation-required-message="Entrez votre e-mail.">
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Téléphone " id="phone">
+                    <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Message *" id="message" required data-validation-required-message="Entrez votre message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button type="submit" class="btn btn-xl">Envoyer</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 {% endblock %}

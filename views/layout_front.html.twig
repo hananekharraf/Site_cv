@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,38 +63,38 @@
       </nav>
 
 
+
+
       <div class="">
         <div id="content">{% block content %}{% endblock %}</div>
       </div>
         <footer>
-            <div class="container">
-                  <div class="row col-lg-12">
-                    <div class="col-md-4">
-                        <span class="copyright">Hanane Kharraf-2017</span>
-                    </div>
-
-                    <div class="col-md-4">
-                      <ul class="nav navbar-nav-right">
-
-                          {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                              <li class="{% if adminMenu is defined %}active{% endif %}"><a href="{{ path('admin') }}"><span class="glyphicon glyphicon-cog"></span> Espace Admin</a></li>
-                          {% else %}
-                              <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                  <span class="glyphicon glyphicon-user"></span> Espace Admin <b class="caret"></b></a>
-                                  <ul class="dropdown-menu">
-                                      <li><a href="{{ path('login') }}">Log in</a></li>
-                                  </ul>
-                              </li>
-                          {% endif %}
+          <div class="container">
+            <div class="row col-lg-12">
+              <div class="col-md-4">
+                <span class="copyright">Hanane Kharraf-2017</span>
+              </div>
+              <div class="col-md-4">
+                <ul class="nav navbar-nav-right">
+                  {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li class="{% if adminMenu is defined %}active{% endif %}"><a href="{{ path('admin') }}"><span class="glyphicon glyphicon-cog"></span> Espace Admin</a></li>
+                  {% else %}
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <span class="glyphicon glyphicon-user"></span> Espace Admin <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{{ path('login') }}">Log in</a></li>
                       </ul>
-                    </div>
-                    <div class="col-md-4">
-                    <div class=" navbar" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav-right">
-                          <li><a href="#page-top"><i class="fa fa-arrow-up fa-lg" aria-hidden="true"> Retourner en haut</i></a></li>
-                          <!-- <li><a href="#contact"><i class="fa fa-arrow-down fa-lg" aria-hidden="true"></i></a></li> -->
-                      </ul>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <div class=" navbar" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav-right">
+                    <li><a href="#page-top"><i class="fa fa-arrow-up fa-lg" aria-hidden="true"> Retourner en haut</i></a></li>
+                    <!-- <li><a href="#contact"><i class="fa fa-arrow-down fa-lg" aria-hidden="true"></i></a></li> -->
+                  </ul>
                 </div>
               </div>
             </div>
